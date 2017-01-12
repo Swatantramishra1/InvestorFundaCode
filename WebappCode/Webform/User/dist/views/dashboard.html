@@ -1,0 +1,590 @@
+
+<div class="page page-dashboard" ng-controller="DashboardCtrl">
+	
+    <div class="page-wrap" ng-show="!showDashboardDetails">
+
+        <div class="row">
+            <!-- dashboard header -->
+            <div class="col-md-12" >
+                <div class="dash-head clearfix mt15 mb20"style="background: #0F6AA3;color:white">
+                    <div class="left">
+                        <h4 class="mb5 text-light">Welcome to InvestorFunda</h4>
+                        <p class="small"><strong>Here is</strong> your personlised Dashboard</p>
+                    </div>
+                    <!--<div class="right mt10">
+                        <span sparkline type="bar" bar-color="#4CAF50">10,8,4,10,7,0,3,4,6,5,9,12,9</span>
+                        <h5 class="text-bold mb0 mt5">$1,33,404</h5>
+                    </div>-->
+                </div>
+            </div>
+        </div> <!-- #end row -->
+        <!-- row -->
+        <div class="row">
+
+            <!-- Analytics -->
+            <div class="col-md-6">
+                <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                    <div class="panel-heading" style="color:#1852A2;font-size:16px">Investment Summary</div>
+                    <div class="investment_body">
+                        <table class="table-bordered" style="width:100%">
+                            <thead>
+                                <tr style="background-color:#F5F5F5">
+                                    <th style="width:100%"></th>
+                                    <th class="col-sm-5">SIP</th>
+                                    <th class="col-sm-1">LumpSum</th>
+                                    <th>All</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color:#EDF8FE">
+                                    <td class="tdStyle">Cost of Investment</td>
+                                    <td>500</td>
+                                    <td>
+                                        0
+                                    </td>
+                                    <td>500</td>
+                                </tr>
+
+                                <tr style="background-color:#FCF8E3">
+                                    <td class="tdStyle">Total Dividend Reinvest</td>
+                                    <td>0</td>
+                                    <td>
+                                        0
+                                    </td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr style="background-color:#E7F7E0">
+                                    <td class="tdStyle">Current Values of investment</td>
+                                    <td>458.36</td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>458.36</td>
+                                </tr>
+
+                                <tr style="background-color:#FFF6FE">
+                                    <td  class="tdStyle">Total Profit/Loss</td>
+                                    <td>32.7</td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>-32.07</td>
+                                </tr>
+
+                                <tr style="background-color:#4874A2;color:white">
+                                    <td class="tdStyle">Absolute Return</td>
+                                    <td>-6.7%</td>
+                                    <td>
+                                        0.00%
+                                    </td>
+                                    <td>-6.57%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div> <!-- #end analytics -->
+
+
+
+
+
+            <div class="col-md-6">
+                <div class="panel panel-default mb20 panel-hovered" style="height:288px">
+                    <div class="panel-heading"style="color:#1852A2;font-size:16px">Investment Graph</div>
+                    <div class="investment_body">
+                        <ul class="list-unstyled">
+                            <li class="col-md-4 col-sm-4">
+                                <div easypiechart percent="storagePercent" options="storageOpts" class="easypiechart">
+                                    <div class="data">
+                                        <strong class="xsmall">{{storagePercent}}%</strong>
+                                        <p class="xsmall">Storage</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-4 col-sm-4">
+                                <div easypiechart percent="serverPercent" options="serverOpts" class="easypiechart">
+                                    <div class="data">
+                                        <strong class="xsmall">{{serverPercent}}%</strong>
+                                        <p class="xsmall">Server</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-4 col-sm-4">
+                                <div easypiechart percent="clientPercent" options="clientOpts" class="easypiechart">
+                                    <div class="data">
+                                        <strong class="xsmall">{{clientPercent}}%</strong>
+                                        <p class="xsmall">Client</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- #end row -->
+        <!-- row -->
+        <!-- row -->
+        <div class="row">
+
+            <!-- Analytics -->
+            <div class="col-md-6">
+                <div class="panel panel-default mb20 panel-hovered project-stats table-responsive" style="height:330px">
+                    <div class="panel-heading" style="color:#1852A2;font-size:16px">Investment Portfolio</div>
+                    <div class="investment_body">
+                        <table class="table-bordered" style="width:100%">
+                            <thead>
+                                <tr style="background-color:#F5F5F5">
+                                    <th class="tdStyle">Funds Name</th>
+                                    <th>Inv. Cost</th>
+                                    <th>Curr. Cost</th>
+                                    <th>Profit/Loss</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tdStyle">Axis Long Term Equity Fund</td>
+                                    <td>500</td>
+                                    <td class="text-center">
+                                        500.17
+                                        <!--<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">2,8</span>-->
+                                    </td>
+                                    <td>1.47</td>
+                                    <td><input type="button" class="btn btn-success" value="Invest" /></td>
+                                </tr>
+
+
+                            </tbody>
+                            <!--<tfoot>
+                                <tr>
+                                    <td> View All</td>
+                                    </tr>
+                            </tfoot>-->
+
+                        </table>
+                       
+                    </div>
+                    <div class="footer" style="height:30px;margin-top:137px;background-color:#FCF8E3">
+                        <a style="float: right; margin-right:6px; cursor: pointer;text-decoration:underline;margin-top:4px" ng-click="showDashboardDetails=!showDashboardDetails">
+                            View All
+                        </a>
+                    </div>
+                </div>
+
+            </div> <!-- #end analytics -->
+            <!-- recent activities -->
+            <!--<div class="col-md-4">
+                <div class="panel panel-default mb20 activities">
+                    <div class="panel-heading">Activities</div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li class="primary">
+                                <span class="point"></span>
+                                <span class="time small text-muted">2 mins ago</span>
+                                <p>Jonathan attend a meeting.</p>
+                            </li>
+                            <li class="success">
+                                <span class="point"></span>
+                                <span class="time small text-muted">1 hour ago</span>
+                                <p>Designed the wordpress theme</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+            <div class="col-md-6 col-sm-6">
+                <div class="panel panel-default mb20 panel-hovered"style="height: 330px;">
+                    <div class="panel-heading" style="color:#1852A2;font-size:16px">Asset Allocation</div>
+                    <div class="investment_body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr style="background-color:#F5F5F5">
+                                    <th></th>
+                                    <th>Type</th>
+                                    <th>Actual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><c3-chart id="c3chartbrowsershare" config="PortfolioAllocationGraph"></c3-chart></td>
+                                    <td>Equity & Debt</td>
+                                    <td>
+                                        48% & 52%
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <!-- #end recent activities -->
+
+
+
+        </div> <!-- #end row -->
+        <!-- row -->
+        <!--<div class="row">
+
+
+            <!-- browser share -->
+        <!--<div class="col-md-8 col-sm-8">
+            <div class="panel panel-default mb20 panel-hovered">
+                <div class="panel-heading">Asset Allocation</div>
+                <div class="panel-body text-center">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Type</th>
+                                <th>Actual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><c3-chart id="c3chartbrowsershare" config="PortfolioAllocationGraph"></c3-chart></td>
+                                <td>Equity & Debt</td>
+                                <td >
+                                    48% & 52%
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>-->
+        <!-- list widgets -->
+        <!--<div class="col-md-4 col-sm-12">
+            <div class="panel panel-default mb20 list-widget">
+                <ul class="list-unstyled clearfix">
+                    <li>
+                        <i class="fa fa-file-o"></i>
+                        <span class="text">File List</span>
+                        <span class="badge badge-xs badge-primary right">100</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-comments-o"></i>
+                        <span class="text">Messages</span>
+                        <span class="badge badge-xs badge-info right">40+</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-bullhorn"></i>
+                        <span class="text">Notifications</span>
+                        <span class="badge badge-xs badge-success right">22</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-hdd-o"></i>
+                        <span class="text">Bandwidth usage</span>
+                        <span class="badge badge-xs badge-danger right">80%</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-microphone"></i>
+                        <span class="text">Calls Attended</span>
+                        <span class="badge badge-xs badge-info circle right">5</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-bookmark-o"></i>
+                        <span class="text">Bookmarks Today</span>
+                        <span class="badge badge-xs circle badge-warning right">2</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-bug"></i>
+                        <span class="text">Bug Fix Today</span>
+                        <span class="badge badge-xs circle badge-danger right">8</span>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+        <!--// Transaction Details-->
+
+
+
+
+
+
+
+
+
+    </div>
+		<!-- #end row -->
+    <div ng-show="showDashboardDetails">
+        <div class="page page-transaction" ng-controller="DashboardCtrl">
+
+            <div class="page-wrap">
+
+                <div class="row col-md-12"style="padding-left:11px;padding-right:0px">
+
+                    <!--<div class="col-md-12">-->
+                        <div class="dash-head clearfix mt15 mb20" style="background-color:#0E5D96;color:white;font-size:16px">
+                            <div class="left">
+                                <h4 class="mb5 text-light">Transaction Details</h4>
+
+                            </div>
+                            <a style="cursor:pointer;float:right;text-decoration:underline;color:white;font-weight:600;margin-top:10px" ng-click="showDashboardDetails=true">Back to Dashboard</a>
+                        </div>
+                    <!--</div>-->
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                         <div class="panel-body">
+                             <div class="col-xs-12 Name NoPadding" style="margin-bottom:15px">
+                                 <div class="col-xs-3 NoPadding">
+                                     <span style="margin-right:5px" class="dashboarText">Name: </span><span>JITESH KOTHARI</span>
+                                 </div>
+                                 <div class="col-xs-3 NoPadding">
+                                     <span style="margin-right:5px" class="dashboarText">PAN: </span><span>CQWETU06895345</span>
+                                 </div>
+                                 <div class="col-xs-3 NoPadding">
+                                     <span style="margin-right:5px" class="dashboarText">Holding Nature: </span><span>SINGLE</span>
+                                 </div>
+                             </div>
+                            <table  class="table-bordered table_dashboard" style="width:100%">
+                                <thead>
+                                   
+                                    <tr style="background-color:#2D7EB5;color:white;font-size:12px;font-weight:400">
+                                        <th>Sr.</th>
+                                        <th>Scheme Name</th>
+                                        <th>Inv.Since</th>
+                                        <th>Inv.Type</th>
+                                        <th>Inv.Cost</th>
+                                        <th>Units</th>
+                                        <th>Avg.Pur.Nav</th>
+                                        <th>cur.Nav</th>
+                                        <th>Cur.Value</th>
+                                        <th>Gain/Loss</th>
+                                        <th>Avg.Cagr</th>
+                                        <th>Abs.Rtn.</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color:#E9FCFF;color: black; font-size: 12px; font-weight: 400"> 
+                                        <td></td>
+                                        <td style="text-align: left;padding-left: 6px;">ELSS</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr style="background-color: #F4F4F4; color: black; font-size: 12px; font-weight: 400">
+                                        <td>1</td>
+                                        <td style="text-align: left;padding-left: 6px;">Axis Long Term Equity Fund(G) <br/>Folio:91025511531</td>
+                                        <td>
+                                            08-08-16
+                                        </td>
+                                        <td>SIP</td>
+                                        <td>500</td>
+                                        <td>14.99</td>
+                                        <td>33.66</td>
+                                        <td>29.71</td>
+                                        <td>445.22</td>
+                                        <td>-54.78</td>
+                                        <td>-25%</td>
+                                        <td>-10.96%</td>
+                                        <td><input type="button" class="btn btn-success" value="Action" /></td>
+                                    </tr>
+
+                                    <tr style="background-color:#E9FCFF;color: black; font-size: 12px; font-weight: 400">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td> Total</td>
+                                        <td>500</td>
+                                        <td>14.988</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>445.22</td>
+                                        <td>-54.78</td>
+                                        <td>-25%</td>
+                                        <td>-10.96%</td>
+                                        <td></td>
+
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div> 
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                        <div class="panel-heading" style="background-color: #2D7EB5; color: white; text-align: center;padding-top: 10px; padding-bottom: 10px;">Fund House Wise Investment summary</div>
+                        <div class="panel-body">
+                            <table class="table-bordered" style="width:100%">
+                                <thead>
+                                    <tr style="background-color:#F4F4F4;color:black;font-size:12px;font-weight:400">
+                                        <th>Fund House</th>
+                                        <th>Inv Cost</th>
+                                        <th>cur Value</th>
+                                        <th>Gain/Loss</th>
+                                        <th>CAGR(%)</th>
+                                        <th>Abs.Rtn(%)</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size: 12px; font-weight: 400">
+                                        <td>Axis</td>
+                                        <td>500</td>
+                                        <td>445.22</td>
+                                         <td>-54.78</td>
+                                        <td>-25</td>
+                                        <td>-10.96</td>
+                                     </tr>
+                                    <tr style="font-size: 12px; font-weight: 400;background-color:#DDF1FE;color:black">
+                                        <td>Total</td>
+                                        <td>500</td>
+                                        <td>445.22</td>
+                                        <td>-54.78</td>
+                                        <td>-25</td>
+                                        <td>-10.96</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-md-6">
+                    <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                        <div class="panel-heading" style="background-color: #4690CF; color: white;    padding-top: 10px; padding-bottom: 10px; text-align: center">Scheme Category Wise Investment summary</div>
+                        <div class="panel-body">
+                            <table class="table-bordered" style="width:100%">
+                                <thead>
+                                    <tr style="background-color:#F4F4F4;color:black;font-size:12px;font-weight:400">
+                                        <th>Fund Category</th>
+                                        <th>Inv Cost</th>
+                                        <th>cur Value</th>
+                                        <th>Gain/Loss</th>
+                                        <th>CAGR(%)</th>
+                                        <th>Abs.Rtn(%)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size: 12px; font-weight: 400">
+                                        <td>ELSS</td>
+                                        <td>500</td>
+                                        <td>445.22</td>
+                                        <td>-54.78</td>
+                                        <td>-25</td>
+                                        <td>-10.96</td>
+                                    </tr>
+                                    <tr style="font-size: 12px; font-weight: 400;background-color:#E4F3FE;color:black">
+                                        <td>Total</td>
+                                        <td>500</td>
+                                        <td>445.22</td>
+                                        <td>-54.78</td>
+                                        <td>-25</td>
+                                        <td>-10.96</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div> 
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                        <div class="panel-heading" style="background-color: #4690CF; color: white;text-align:center;padding-top: 10px; padding-bottom: 10px;">Scheme Past Performance(%)</div>
+                        <div class="panel-body">
+                            <table class="table-bordered" style="width:100%">
+                                <thead>
+                                    <tr style="background-color:#F4F4F4;color:black;font-size:12px;font-weight:400">
+                                        <th>Fund House</th>
+                                        <th>1 <br/>Day</th>
+                                        <th>1 <br/>Month</th>
+                                        <th>3 <br/>Months</th>
+                                        <th>6 <br />Months</th>
+                                        <th>1 Year</th>
+                                        <th>3 Year</th>
+                                        <th>5 Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size: 12px; font-weight: 400">
+                                        <td>Axis Long Equity Fund(G)</td>
+                                        <td>0</td>
+                                        <td>-3.59</td>
+                                        <td>-10.69</td>
+                                        <td>-3.33</td>
+                                        <td>-1.68</td>
+                                        <td>19.8</td>
+                                        <td>21.44</td>
+                                    </tr>
+                                   
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                        <div class="panel-heading" style="background-color:#4690CF;color:white;text-align:center;padding-top: 10px; padding-bottom: 10px;">SIP Due Dates(s)</div>
+                        <div class="panel-body">
+                            <table class="table-bordered">
+                                <thead>
+                                    <tr style="background-color:#F4F4F4;color:black;font-size:12px;font-weight:400">
+                                        <th>Scheme Name</th>
+                                        <th>Folio No</th>
+                                        <th>SIP Date</th>
+                                        <th>Tenure(Months)</th>
+                                        <th>Amount</th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size: 12px; font-weight: 400">
+                                        <td>Axis Long Equity Fund(G)</td>
+                                        <td>91025511531</td>
+                                        <td>1st</td>
+                                        <td>12</td>
+                                        <td>500</td>
+                                    </tr>
+                                   
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+	</div> <!-- #end page-wrap -->

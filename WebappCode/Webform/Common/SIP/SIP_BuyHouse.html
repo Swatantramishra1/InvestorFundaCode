@@ -1,0 +1,91 @@
+﻿<section class="insurance-headline" style="background-color:white">
+    <div class="row">
+        <div class="shadow-wrapper margin-bottom-10">
+            <div class="tag-box tag-box-v1 box-shadow shadow-effect-2">
+                <h2><strong>BUY A HOUSE PLAN</strong>   </h2>
+                <p>Make assure your goal is at right direction which help us to provide best way to invest.</p>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-12 margin-bottom-60">
+            <div class="col-md-5">
+               
+                <img src="http://www.99acres.com/microsite/articles/files/2016/07/family.jpeg" style="height:500px;width:100%" />
+            </div>
+            <div class="col-md-7" style="text-align:left;padding-top:20px" md-theme="default">
+                <div class="col-md-12" style="padding:0px" ng-show="BuyHouse_Step1">
+                    <md-input-container class="md-block">
+                        <label>GIVE YOUR GOAL A NAME</label>
+                        <input ng-model="Portfolio_Parameter.Portfolio_Name">
+                    </md-input-container>
+                    <md-input-container class="md-block" style="margin-top:30px">
+                        <label> ENTER YOUR GOAL AMOUNT</label>
+                        <input ng-model="Portfolio_Parameter.Portfolio_GoalAmount">
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>PERIOD TO ACHEIVE GOAL YEAR:</label>
+                        <md-select ng-model="Portfolio_Parameter.Portfolio_Year">
+                            <md-option value="0"><em>None</em></md-option>
+                            <md-option ng-value="{{GoalYear.Year}}" ng-repeat="GoalYear in BuyHouse_NoGoalYear.BuyHouse">
+                                {{GoalYear.Year}} Years
+                            </md-option>
+
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>PERIOD TO ACHEIVE GOAL MONTH:</label>
+                        <md-select ng-model="Portfolio_Parameter.Portfolio_Month">
+                            <md-option value="0"><em>None</em></md-option>
+                            <md-option ng-value="{{GoalMonth.Month}}" ng-repeat="GoalMonth in BuyHouse_NoGoalMonth.BuyHouse">
+                                {{GoalMonth.Month}} Years
+                            </md-option>
+
+                        </md-select>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>RATE OF INFLATION (%)</label>
+                        <md-select ng-model="Portfolio_Parameter.Portfolio_ROInflation">
+                            <md-option value="0"><em>None</em></md-option>
+                            <md-option ng-value="{{Inflation.Inflation_Percentage}}" ng-repeat="Inflation in PortFolio_InflationRate.Inflation">
+                                {{Inflation.Inflation_Percentage}} %
+                            </md-option>
+
+                        </md-select>
+                    </md-input-container>
+
+                </div>
+                <div class="col-md-12" style="padding:0px" ng-show="BuyHouse_Step2">
+                    <div class="row margin-bottom-20" style="font-size:34px">
+                        <div class="col-md-12" style="color:black">
+                            Your investment of 
+                            <span class="red-text" id="amount-poc"><i class="fa fa-rupee"></i> {{Portfolio_Parameter.SIPAmount}}/-</span>
+                            at rate of interest of <span class="red-text" id="rate-poc">
+                                {{Portfolio_Parameter.Portfolio_ROInflation}}%
+                            </span>after
+                            <span class="red-text" id="term-poc">{{Portfolio_Parameter.Portfolio_Year}} Years {{Portfolio_Parameter.Portfolio_Month}} Month</span> will grow to -
+                        </div>
+                        <div class="col-md-12 size-large text-success">
+                            <i class="fa fa-rupee"></i> {{Portfolio_Parameter.TotalMoney}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row text-right">
+                    <md-button ng-show="!BuyHouse_Step1" ng-click="BuyHouse_Back()"><i class="fa fa-backward"></i> Back</md-button>
+                    <md-button ng-show="!BuyHouse_Step1" class="md-raised" ng-click="Portfolio_InvestNow()">Invest Now</md-button>
+                    <md-button ng-show="BuyHouse_Step1" class="md-raised" ng-click="Portfolio_Calculate()">Calculate</md-button>
+                </div>
+
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+
+</section>

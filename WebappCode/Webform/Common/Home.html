@@ -1,0 +1,825 @@
+﻿
+<div class="col-md-12" style="background-color:white">
+    <!--=== Slider ===-->
+    <div class="row">
+        <div class="col-md-6 col-lg-8 ">
+
+            <div class="carousel slide carousel-v1 margin-bottom-40" id="myCarousel-1">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="" src="../../Img/kid.png">
+                        <div class="carousel-caption">
+                            <p>Your child's dream need your planning</p>
+                            <md-button class="Gray_Btn">START PLANNING</md-button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../../Img/tennis.png">
+                        <div class="carousel-caption">
+                            <p>There is nothing more relaxing than retirement,<br />If you have planned for it</p>
+                            <md-button class="Gray_Btn">PLAN YOUR RETIREMENT</md-button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../../Img/marriage.png">
+                        <div class="carousel-caption">
+                            <p>Marriage is a big day ,Let it not be a burden</p>
+                            <md-button class="Gray_Btn">START PLANNING</md-button>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img alt="" src="../../Img/buyacar.png">
+                        <div class="carousel-caption">
+                            <p>NOW JUST DON'T DREAM YOUR DREAM CAR</p>
+                            <md-button class="Gray_Btn">PLAN IT</md-button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../../Img/buyahouse.png">
+                        <div class="carousel-caption">
+                            <p>NOW JUST DON'T DREAM YOUR DREAM HOUSE</p>
+                            <md-button class="Gray_Btn">PLAN IT</md-button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="../../Img/golf.png">
+                        <div class="carousel-caption">
+                            <p>Grow  your income not your taxes</p>
+                            <md-button class="Gray_Btn">PLAN IT</md-button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 " style="padding-top:48px">
+            <div class="col-md-12" style="padding-right: 37px;">
+                <h5 style="text-align:center">Help us with some information of you to create a portfolio that best fits in your needs</h5>
+                <h2 style="text-align:center;font-size: 28px;margin-top:10px">PLAN YOUR FUTURE</h2>
+                <div class="row" style="margin-top:30px">
+                    <div class="form-group">
+                        <div class="row" style="color:black !important;margin-left:-12px">
+
+                            <div class="col-md-12">
+                                <md-input-container class="md-block" style="height:25px;margin-top:-10px">
+                                    <input ng-model="Age_Year" placeholder="Your Age">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row" style="color:black !important;margin-left:-12px">
+
+                            <div class="col-md-12">
+                                <md-input-container class="md-block" style="height:25px;margin-top:-10px">
+                                    <input ng-model="Invest_money" placeholder="You can Invest ">
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <md-button class="md-raised">Proceed</md-button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--=== End Slider ===-->
+    <!-- End Purchase Block -->
+    <!--=== Content Part ===-->
+    <div class="one-page ">
+        <div class="row divider_color" style="background-color:#293542;color:white;margin-top:20px;height:500px">
+            <div class="container" >
+                <div class="row">
+                    <div class="col-md-12" style="padding-top: 26px;">
+                        <div class="row">
+                            <h2 style="text-align:center">See how much your saving can grow through</h2>
+                            <h2 style="text-align:center;font-size:25px">SYSTEMATIC INVESTMENT PLAN(SIP)</h2>
+                            <div class="col-md-12 sentence" style="margin-top:70px">
+                                <div class="sentence">
+                                    <span class="edit-age margin-bottom-30">
+                                        You can invest  <i class="fa fa-rupee" style="position: absolute;padding-left: 17px;padding-top: 15px;color:#c2c3c9"></i>
+                                        <input type="text" placeholder="" maxlength="7" name="age" class="enter-age enter-income border" ng-model="SIP_Money_bar">
+                                        <span class="madlib-error"></span> per month
+                                        from your savings for <input type="text" placeholder="" maxlength="7" name="age" class="enter-age age border" ng-model="SIP_Year_bar"> years  and you are expecting
+                                        <input type="text" placeholder="" maxlength="3" value="15" name="age" ng-model="SIP_Percet_bar" class="enter-age age border"> % return.
+                                    </span>
+
+                                    <md-button class="Green_Btn" ng-click="calculate_SIP()">Calculate It</md-button>
+                                    <div ng-show="calulated_Money_SIP.length>0" style="background: gray;border: 1px solid;color:whitesmoke" >Your investment will grow up to <i class="fa fa-rupee"></i> {{calulated_Money_SIP}}</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="one-page-inner divider_color">
+            <div class="container" style="margin-top:20px">
+                <div class="container" >
+                    <div class="row">
+                        <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                          Where your investment is going
+                        </h1>
+                        <h5 style="text-align:center">
+                            <span style="color:#293542">SMART and SIMPLE mode for investing money in mutual funds.</span>
+                        </h5>
+                        <div class="col-md-8">
+                            <div class="col-md-12 text-center">
+                                <div style="text-align:center;padding-left:47%" >  <div style="width:35px;height:30px;background-color:rgba(102,0,51,1);text-align:center;color:white;padding:5px">1</div></div>
+                                <div class="col-md-12 text-center">
+                                    <h1 style="color:black"><strong>Flexibility</strong></h1>
+                                    <p style="color:black;margin-top:-15px;text-align:justify">While it is advisable to continue SIP investments with a long-term perspective, there is no compulsion. Investors can discontinue the plan at any time. One can also increase/ decrease the amount being invested.SIP is a hassle-free mode of investment. You can issue a standing instruction to your bank to facilitate auto-debits from your bank account.<strong>(see our video tutorial )</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div style="text-align:center;padding-left:47%">  <div style="width:35px;height:30px;background-color:rgba(102,0,51,1);text-align:center;color:white;padding:5px">2</div></div>
+                                <div class="col-md-12 text-center">
+                                    <h1 style="color:black"><strong>Power of compunding</strong></h1>
+                                    <p style="color:black;margin-top:-15px;text-align:justify">
+                                        Time and  compounding interest are a powerful combination that will multiply your wealth beyond your imagination over a longer period of time.<strong> (see the illustration)</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div style="text-align:center;padding-left:47%">  <div style="width:35px;height:30px;background-color:rgba(102,0,51,1);text-align:center;color:white;padding:5px">3</div></div>
+                                <div class="col-md-12 text-center">
+                                    <h1 style="color:black"><strong>Disciplined Saving</strong></h1>
+                                    <p style="color:black;margin-top:-15px;text-align:justify">
+                                        Discipline is the key to successful investments. When you invest through SIP, you commit yourself to save regularly. Every investment is a step towards attaining your financial objectives.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div style="text-align:center;padding-left:47%">  <div style="width:35px;height:30px;background-color:rgba(102,0,51,1);text-align:center;color:white;padding:5px">4</div></div>
+                                <div class="col-md-12 text-center">
+                                    <h1 style="color:black"><strong>Market volatility doesn’t harm much</strong></h1>
+                                    <p style="color:black;margin-top:-15px;text-align:justify">
+                                        If the price goes down  in the next month you have a consolation that you are also buying at reduced price and if the market recovers to previous level ,You actually makes money overall<strong> (see the illustration)</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="myCarousel" class="carousel slide carousel-v1">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="../../Img/belowSlider1.jpg" alt="">
+
+                                    </div>
+                                    <div class="item">
+                                        <img src="../../Img/belowSlider2.jpg" alt="">
+                                        <!--<div class="carousel-caption">
+                                            <p>Cras justo odio, dapibus ac facilisis into egestas.</p>
+                                        </div>-->
+                                    </div>
+                                    <div class="item">
+                                        <img src="../../Img/belowSlider3.jpg" alt="">
+
+                                    </div>
+                                </div>
+
+                                <!--<div class="carousel-arrow">
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>-->
+                            </div>
+                            <!--<img src="http://demobyrightfoot.in/wp-content/uploads/2016/09/PLAN-YOUR-FUTURE-709x1024-346x500.jpg" alt="">-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="one-page-inner" >
+            <div class="row" style="background-color:#010c19;height:520px">
+                <div class="container text-center" style="padding-top:16px">
+                    <h1 style="color:white  !important;margin-bottom:20px;text-align:center;font-size:28px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                        Enjoy both the benefits of growing your money, as well as tax benefits.
+                        under ELSS Tax Savings Scheme
+                    </h1>
+                    <h3 style="text-align:center;color:white">INVESTMENT OF  RS 1.5 LAC CAN SAVE TAX UP TO RS 46,350.</h3>
+                    <iframe height="300px" width="50%" src="https://www.youtube.com/embed/mInPCUXo0lw" frameborder="0" allowfullscreen></iframe>
+
+                    <h3 style="text-align:center;color:white;padding-top:16px">What is ELSS and how it can can help you save tax and create wealth in the long-term.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="one-page-inner one-default margin-bottom-60">
+            <div class="container">
+                <div class="row">
+                    <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">Where your investment is going</h1>
+                    <h4 class="header_color" style="text-align:center">WE WORK TOWARDS YOUR FUTURE</h4>
+                    <div class="col-md-12 below_slider">
+                        <div class="carousel slide carousel-v1" id="myCarousel-1">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img alt="" src="../../Img/piechart.png">
+                                    <div class="carousel-caption">
+                                        <h4 class="header_color"><strong>Review your recommended investment portfolio</strong> </h4>
+                                        <p class="paragraph_color">Based on your goal and risk profile ,We recommend an investment portfolio that suits your needs .You can also choose your own funds .or our experts are always available to support you if you find troubling in taking your decision</p>
+
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="" src="../../Img/target.png">
+                                    <div class="carousel-caption" style="padding-top:3%">
+                                        <h4 class="header_color"><strong>Share your investment goals</strong> </h4>
+                                        <p class="paragraph_color">We need to know about you,about who you are ,what you want to achieve.Once we know about you ,It helps us to do the analysis according to your needs.</p>
+
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="" src="../../Img/SignIn.png" >
+                                    <div class="carousel-caption" style="padding-top:4%">
+                                        <h4 class="header_color"><strong>SIGN UP</strong> </h4>
+                                        <p class="paragraph_color">Now sign up with us .open a free account .verify your account using PAN card .Your eKYC will be complete. You will be eligible to invest in a selected number of schemes, and you will enjoy access to the full range of services on Investorfunda.</p>
+
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="" src="../../Img/42.png" >
+                                    <div class="carousel-caption" style="padding-top:4%">
+                                        <h4 class="header_color"><strong>SIGN UP</strong> </h4>
+                                        <p class="paragraph_color">Money you invested goes directly to the respective fund houses account  that you have selected or advised by us.We don't keep your money with us.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="one-page-inner one-default ">
+            <div class="container">
+                <div class="row">
+                    <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">We are your investment solution</h1>
+                    <h4 class="header_color" style="text-align:center">Build an intelligent, tax-efficient, diversified portfolio </h4>
+                    <div class="col-md-12 below_slider margin-bottom-50">
+                        <div class="col-md-6 text-center">
+                            <img src="http://demobyrightfoot.in/wp-content/uploads/2016/10/labyrinth.png" />
+                            <h4 class="header_color" style="text-align:center;font-weight:800">Best investment solutions</h4>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="http://demobyrightfoot.in/wp-content/uploads/2016/10/headphones.png" style="width:60px"/>
+                            <h4 class="header_color" style="text-align:center;font-weight:800">Dedicated customer</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-12 below_slider">
+                        <div class="col-md-6 text-center">
+                            <img src="https://www.acorns.com/assets/images/even-more/icon-found-money.svg" />
+                            <h4 class="header_color" style="text-align:center;font-weight:800">no transaction fee, no account opening  <br />and no account maintenance fees.</h4>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="http://demobyrightfoot.in/wp-content/uploads/2016/10/mobile-application.png" style="height:40PX" />
+                            <h4 class="header_color" style="text-align:center;font-weight:800">See all your investments in one <br /> place with our mobile app.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="one-page-inner one-default ">
+            <div class="row" style="background-color:#293542;color:white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <br>
+                            <h1 style="color:white  !important;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"> Track your investments from wherever you are</h1>
+                            <h4 class="header_color" style="text-align:center">investorfunda offers an investment management app built natively for your iPhone, iPad and Android. </h4>
+
+                            <ul class="ul-list">
+                                <li style="color:rgba(255, 255, 255, 0.65)">
+                                    <h6 style="color:white"><i class="fa fa-lock"></i> BANK-LEVEL SECURITY </h6>
+                                    <i class="fa fa-check"></i> Secure servers and privacy verified by physical security.
+                                </li>
+                                <li style="color:rgba(255, 255, 255, 0.65)">
+                                    <h6 style="color:white"><i class="fa fa-bookmark-o"></i> ACCOUNT ALERTS </h6>
+                                    <i class="fa fa-check"></i> We will contact you about unusual account activity for protection against fraud.
+                                </li>
+                                <li style="color:rgba(255, 255, 255, 0.65)">
+                                    <h6 style="color:white"><i class="fa fa-bookmark-o"></i> ACCOUNT SAFEGUARDS </h6>
+                                    <i class="fa fa-check"></i> Multi-factor authentication, automatic logouts and ID verification help prevent unauthorized access.
+                                </li>
+                            </ul>
+                            <!--<div class="button1">
+                    <a href="#menu6">Request a quote</a>
+                </div>   <br>-->
+                        </div>
+                        <div class="col-md-6" style="padding-top: 37px;">
+                            <img src="http://demobyrightfoot.in/wp-content/uploads/2016/09/phone@2x.png" height="300px" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="one-page-inner one-default margin-bottom-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <br>
+                        <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"> Serious Security</h1>
+                        <h4 class="header_color" style="text-align:center">investorfunda offers an investment management app built natively for your iPhone, iPad and Android. </h4>
+                        <div class="col-md-12 below_slider margin-bottom-50">
+                            <div class="col-md-6 text-center">
+                                <img src="http://demobyrightfoot.in/wp-content/uploads/2016/09/App-Store-Transparent-border.png" style="width:200px" />
+                            </div>
+                            <div class="col-md-6 text-center" style="margin-top: 7px">
+                                <img src="http://demobyrightfoot.in/wp-content/uploads/2016/09/en_badge_web_generic.png" style="width:220px" />
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <img src="http://demobyrightfoot.in/wp-content/uploads/2016/09/Presentation114-1024x576.jpg" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="one-page-inner one-default margin-bottom-60 divider_color">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:40px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"> OUR PARTNERS</h1>
+                     <div id="clients-flexslider" class="flexslider home clients">
+                      
+                        <ul class="slides">
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/AIGb.png" alt="">
+                                    <img src="../../Img/Clients/AIGc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/BankOfBarodab.png" alt="">
+                                    <img src="../../Img/Clients/BankOfBarodac.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Becnhamarkb.png" alt="">
+                                    <img src="../../Img/Clients/Becnhamarkc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Bhartib.png" alt="">
+                                    <img src="../../Img/Clients/Bhartic.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Birlab.png" alt="">
+                                    <img src="../../Img/Clients/Birlac.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/BNPb.png" alt="">
+                                    <img src="../../Img/Clients/BNPc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Canarab.png" alt="">
+                                    <img src="../../Img/Clients/Canarac.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/DaiwaAMb.png" alt="">
+                                    <img src="../../Img/Clients/DaiwaAMb.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/DSPb.png" alt="">
+                                    <img src="../../Img/Clients/DSPb.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Edelweissb.png" alt="">
+                                    <img src="../../Img/Clients/Edelweissc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Eiiib.png" alt="">
+                                    <img src="../../Img/Clients/Eiiic.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/HDFCb.png" alt="">
+                                    <img src="../../Img/Clients/HDFCc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/ICICIb.png" alt="">
+                                    <img src="../../Img/Clients/ICICIc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/IDBIb.png" alt="">
+                                    <img src="../../Img/Clients/IDBIc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/INGb.png" alt="">
+                                    <img src="../../Img/Clients/INGc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/JMb.png" alt="">
+                                    <img src="../../Img/Clients/JMc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Kotakb.png" alt="">
+                                    <img src="../../Img/Clients/Kotakc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/L&Tb.png" alt="">
+                                    <img src="../../Img/Clients/L&Tc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/LICb.png" alt="">
+                                    <img src="../../Img/Clients/LICc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Miraeb.png" alt="">
+                                    <img src="../../Img/Clients/Miraec.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Morganb.png" alt="">
+                                    <img src="../../Img/Clients/Morganc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Motilalb.png" alt="">
+                                    <img src="../../Img/Clients/Motilalc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/peerlessb.png" alt="">
+                                    <img src="../../Img/Clients/peerlessc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Pioneerb.png" alt="">
+                                    <img src="../../Img/Clients/Pioneerc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Pramericab.png" alt="">
+                                    <img src="../../Img/Clients/Pramericac.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Principalb.png" alt="">
+                                    <img src="../../Img/Clients/Principalc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Religreb.png" alt="">
+                                    <img src="../../Img/Clients/Religrec.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Saharab.png" alt="">
+                                    <img src="../../Img/Clients/Saharac.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/StandardCb.png" alt="">
+                                    <img src="../../Img/Clients/StandardCc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/tatab.png" alt="">
+                                    <img src="../../Img/Clients/tatac.png" class="color-img" alt="">
+                                </a>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/UTIb.png" alt="">
+                                    <img src="../../Img/Clients/UTIc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                          
+
+
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Fidelityb.png" alt="">
+                                    <img src="../../Img/Clients/Fidelityc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Franklinb.png" alt="">
+                                    <img src="../../Img/Clients/Franklinc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Gsamb.png" alt="">
+                                    <img src="../../Img/Clients/Gsamc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/IIFLb.png" alt="">
+                                    <img src="../../Img/Clients/IIFLc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/IndiaBullsb.png" alt="">
+                                    <img src="../../Img/Clients/IndiaBullsc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/jpmorganb.png" alt="">
+                                    <img src="../../Img/Clients/jpmorganc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/PNBb.png" alt="">
+                                    <img src="../../Img/Clients/PNBc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Quantumb.png" alt="">
+                                    <img src="../../Img/Clients/Quantumc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Relianceb.png" alt="">
+                                    <img src="../../Img/Clients/Reliancec.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../../Img/Clients/Sundaramb.png" alt="">
+                                    <img src="../../Img/Clients/Sundaramc.png" class="color-img" alt="">
+                                </a>
+                            </li>
+                         
+                        </ul>
+                    </div>         
+
+                </div>
+            </div>
+        </div>
+
+        <div class="one-page-inner one-default margin-bottom-60 divider_color">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:40px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"> What is your goal?</h1>
+                    <div class="row">
+                        <div class="row content-boxes-v1 margin-bottom-40">
+                            <div class="col-md-2 md-margin-bottom-30 AnchorCursorPointer" ui-sref="Goal">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark fa fa-graduation-cap"></i>
+                                    <span>CHILD’S EDUCATION</span>
+                                </h2>
+
+                            </div>
+                            <div class="col-md-2 md-margin-bottom-30 AnchorCursorPointer" ui-sref="Retirement">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark fa fa-wheelchair"></i>
+                                    <span>RETIREMENT PLAN</span>
+                                </h2>
+
+                            </div>
+                            <div class="col-md-2">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark icon-line icon-home"></i>
+                                    <span>BUY A HOUSE PLAN</span>
+                                </h2>
+
+                            </div>
+                            <div class="col-md-2">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark fa fa-car"></i>
+                                    <span>PLAN FOR CAR INVESTMENT</span>
+                                </h2>
+
+                            </div>
+                            <div class="col-md-2">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark icon-line icon-user"></i>
+                                    <span>CHILD’S MARRIAGE PLAN</span>
+                                </h2>
+
+                            </div>
+                            <div class="col-md-2">
+                                <h2 class="heading-md">
+                                    <i class="icon-custom rounded-x icon-lg icon-bg-dark icon-line icon-user"></i>
+                                    <span>CHILD’S MARRIAGE PLAN</span>
+                                </h2>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="one-page-inner one-default margin-bottom-60 divider_color">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:40px;text-align:center;font-size:39px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">Myths about mutual funds</h1>
+                    <div class="row">
+                       <div class="col-md-4">
+                           <img src="http://demobyrightfoot.in/wp-content/uploads/2016/10/OE5MDX0.jpg" style="height:400px" />
+                       </div>
+                        <div class="col-md-8">
+                            <div class="panel-group acc-v1" id="accordion-1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-One" style="height:45px;text-decoration:none">
+                                                						
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : Mutual Funds are for experts	</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-One" class="panel-collapse collapse in">
+                                        <div class="panel-body fund-detal">
+                                         <p style="color:black;text-align:justify">Fact : Part of the fear of Mutual Funds is that everything will go above your head and that only experts in finance can understand how they work. This is not true at all! Unlike the equity market, you don’t have to take the call on when to buy or sell shares, the fund manager will do it for you. It is his job to track various sectors and companies. He will help you decide where to invest your money. So in actuality, even if you aren’t a financial expert, you will still have access to someone who is, and with his help there’s no doubt you will make the right decisions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-Two" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : Mutual Funds are only for the long term</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Two" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <p style="color:black;text-align:justify">Fact : Yes, long-term investments have a slight advantage, but that doesn’t mean that Mutual Funds are only for such investors. In fact, there are various short-term schemes where you can invest from a day to a few weeks.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default ">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-Three" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : Mutual Fund is an equity product	</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Three" class="panel-collapse collapse">
+                                        <div class="panel-body fund-detal">
+                                            <p style="color:black;text-align:justify">Fact : People usually associate Mutual Funds with Equity Funds, but this is not entirely true. Mutual Funds invest in a variety of instruments ranging from equity to debt. Within debt they may invest in debt instruments that mature in a day (also known as Money Market Instruments) to those that mature in 1 or even 10 years.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-Four" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : Mutual Funds with a Rs. 10 NAV are better than Mutual Funds having a Rs. 25 NAV</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-Four" class="panel-collapse collapse">
+                                        <div class="panel-body fund-detal">
+                                            <p style="color:black;text-align:justify">Fact : This simply comes down to a subconscious movement towards what seems to be cheaper. But the fact is that what matters is the percentage return on invested funds. For example, given a similar performance level of 10% appreciation, a Rs. 10 NAV will rise to Rs. 11 whereas a fund with a NAV of Rs. 200 will rise to Rs. 220. The reality is, due to an already demonstrated performance, the chance of the Rs. 200 scheme posting the 10% appreciation is higher than the one that has just started its journey. So instead of concentrating on a “low” NAV and more number of units, it is worthwhile to consider other factors like the performance track record, fund management and volatility that determine the portfolio return.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-five" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : One needs a large sum to invest in Mutual Funds</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-five" class="panel-collapse collapse">
+                                        <div class="panel-body fund-detal">
+                                            <p style="color:black;text-align:justify">Fact : This is one of the most long standing myths which today have absolutely no value whatsoever. Most funds today allow investments as low as Rs. 1000, with no limits on the maximum amount. In fact, even for Equity linked savings schemes the amount is as low as Rs. 500. What’s more, there is no monthly or annual maintenance charge even if you don’t transact further. Mutual Funds also offer the SIP facility in many of their schemes which allows you to invest small amounts of your choice regularly.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-six" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : One needs to have a Demat account to invest in Mutual Funds</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-six" class="panel-collapse collapse">
+                                        <div class="panel-body fund-detal">
+                                            <p style="color:black;text-align:justify">Fact : This is not true. There are multiple ways in which you can buy Mutual Funds, some of which are Offline: By filling up a form through financial intermediaries like independent financial advisors, banks, financial distribution houses etc. Online: Through the many accessible distributor websites Online: Through AMC websites If you have a Demat account, you can even consolidate the Mutual Fund holdings along with other holdings in the Demat account. You can even buy Mutual Funds through the same intermediary who helps you buy and sell shares on exchanges.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading AnchorCursorPointer">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" data-target="#collapse-seven" style="height:45px;text-decoration:none">
+
+                                                <h1 style="color:#293542  !important;text-align:left;font-size:17px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;"><i class="fa fa-laptop"></i> Myth : Funds with a higher NAV have reached the peak</h1>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse-seven" class="panel-collapse collapse">
+                                        <div class="panel-body fund-detal">
+                                            <p style="color:black;text-align:justify">Fact : This is a very common misconception because of the general association of Mutual Funds with shares. Buy you must remember that Mutual Funds invest in shares, so they can get in and out whenever the Fund Manager deems appropriate. If the Fund Manager feels that a stock has peaked, he can choose to sell it. To understand the reality of this myth better you need to understand that the NAV is nothing but a reflection of the market value of the shares held by the fund on any day. In all probability the NAV is high on account of a good performance over the years. Imagine two schemes. Scheme A is a new scheme with an NAV of Rs. 15 and Scheme B is an old scheme with an NAV of Rs. 150. If the holdings of both these schemes increase by 10%, the NAV of both schemes will go up by 10%. The NAV of scheme A will be Rs. 16.5 and that of scheme B be Rs. 165. So you realise that it doesn’t really matter if the NAV is Rs. 15 or Rs. 150.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div><!--/one-page-->
+    <!-- End Content Part -->
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        App.initFancybox();
+        Index.initRevolutionSlider();
+        App.initSliders();
+    });
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
+</script>

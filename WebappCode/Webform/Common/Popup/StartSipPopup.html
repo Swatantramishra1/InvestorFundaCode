@@ -1,0 +1,99 @@
+﻿<md-dialog aria-label="Mango (Fruit)" style="background-color:white;width:800px;margin-top:50px">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools" style="background-color:#0079d7">
+                <div flex>
+                    <h2 style="color:white">
+                        Easy SIP
+                    </h2>
+                </div>
+
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="../../../Img/ic_close_white_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <div class="panel-body">
+                    <form class="margin-bottom-40" role="form">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">YOUR INVESTMENT HORIZON</label>
+                                <label class="form-control">{{StartSipPopupLlDb.horizone}} Year</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">YOUR MONTHLY INVESTMENT IS</label>
+                                <label class="form-control">{{StartSipPopupLlDb.MonthllyInvestment}}</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">CHOOSE YOUR RISK PROFILE</label>
+                                <label class="form-control">{{StartSipPopupLlDb.risk}}</label>
+                            </div>
+                        </div>
+
+                      
+                    </form>
+                </div>
+                <div class="row tab-v3">
+                    <div class="col-sm-4">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active"><a data-target="#home-2" data-toggle="tab"><i class="fa fa-home"></i> SIP</a></li>
+                            <li><a data-target="#profile-2" data-toggle="tab"><i class="fa fa-cloud"></i> LUMPSUM</a></li>
+                            <li ><a data-target="#home-3" data-toggle="tab"><i class="fa fa-home"></i> TAX-SAVING</a></li>
+                            <li><a data-target="#profile-3" data-toggle="tab"><i class="fa fa-cloud"></i> NON TAX-SAVING</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="home-2">
+                                <p>
+                                    Systematic Investment Plan is a convenient way to make investments towards long term goals. With SIP, you can invest a fixed amount every month for up to 15 years. Your money is debited automatically from your bank account through ECS mandate provided by you. Units are allocated based on NAV (Net Asset Value) applicable for the day.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade in" id="profile-2">
+                                <p>
+                                    A lumpsum purchase is a convenient option when you wish to invest certain amount of accumulated savings. It is done with a single payment and payment can be done immediately through Net Banking or Debit card.
+
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade in" id="home-3">
+                                <p>
+                                    ELSS funds offering tax benefits under Section 80C of the Income Tax Act
+
+                                </p>
+
+                            </div>
+                            <div class="tab-pane fade in" id="profile-3">
+                                <p>
+                                   
+
+                                </p>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button   md-autofocus  ng-click="EasySIPClick()">
+                Next
+            </md-button>
+            <span flex></span>
+
+        </md-dialog-actions>
+    </form>
+</md-dialog>

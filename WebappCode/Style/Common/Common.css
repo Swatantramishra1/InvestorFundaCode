@@ -1,0 +1,324 @@
+﻿.AnchorCursorPointer{
+    cursor:pointer;
+}
+.ColorNav{
+    color:#159e5b;
+}
+.ColorNavNone{
+    color:#dd4e41;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    z-index:10;
+}
+   #myProgress_Home {
+
+
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar_Home {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #4CAF50;
+}
+
+#label_Home {
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+.header_color{
+    color:#293542 !important;
+}
+.paragraph_color{
+    color:black !important;
+}
+.purchase span
+{
+ font-size:16px !important;
+}
+.rzslider
+{
+    height:22px !important;
+}
+.md-button.md-default-theme.md-raised, .md-button.md-raised 
+{
+    background-color:rgba(102,0,51,1) !important;
+    color:white !important;
+}
+.header .navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+md-content.md-default-theme, md-content {
+    color: rgba(0,0,0,0.87);
+    background-color: white !important;
+    margin-bottom:60px;
+}
+.Circular_div
+{
+
+width: 200px;
+height: 200px;
+background: #660033;
+color:#ffffff;
+border-radius:50% !important;
+text-align:center;
+padding-top:23%;
+font-size:31px;
+
+
+}
+.Btn_Background_Custom{
+    background-color: #293542;
+    color:white !important;
+
+}
+.rzslider .rz-bubble.rz-limit {
+    margin-bottom:15px;
+}
+.header-fixed
+{
+    top:0px !important;
+}
+ .OnHoverSchemename:hover
+ {
+     cursor:pointer;
+     color:rgba(102,0,51,1) !important;
+ }
+ .btn-u
+ {
+     background-color:rgba(102,0,51,1) !important;
+     color:white;
+ }
+ .ListInvestmenttd{
+     text-align:center !important;
+ }
+ 
+ .tp-banner-container .da-arrows:hover 
+ {
+     display:none !important;
+ }
+ .tp-rightarrow
+ {
+     display:none !important;
+ }
+ .tp-leftarrow
+ {
+    display:none !important;
+ }
+ /*.revolution-mch-1:after 
+ {
+     background-color:white !important;
+ }*/
+ .carousel-caption
+ {
+     text-shadow:none !important;
+ }
+ .below_slider .carousel-v1 .carousel-caption 
+ {
+    height: 100%;
+    width: 100%;
+    /* left: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    padding-left: 31%;
+    padding-top: 13%;
+    text-transform: uppercase;
+    background-color: transparent;
+ }
+ .carousel-v1 .carousel-caption
+ {
+    height: 100%;
+    width: 50%;
+    left: 0;
+    /* right: 0; */
+    /* bottom: 0; */
+    padding-top:18%;
+    text-transform:uppercase; 
+    background-color:transparent;
+ }
+  .carousel-v1 .carousel-caption p{
+      color:rgba(102,0,51,1) !important;
+      font-size:16px;
+  }
+
+  .Gray_Btn
+  {
+    background-color:#293542 !important;
+    color:white !important;
+}
+  .Green_Btn
+  {
+    background-color:#5cba3c !important;
+    color:white !important;
+}
+  .divider_color
+  {
+      border-top:1px solid rgba(153, 153, 153, 0.35);
+  }
+  small{
+      font-size: .85em;
+    font-weight: 700;
+    letter-spacing: .5px;
+   text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin: 0 auto 15px;
+    text-align: center;
+    font-family:inherit
+  }
+  .sentence {
+      font-family:open sans-serif;
+      text-align:center;
+      font-size: 29px;
+      padding-bottom: 30px;
+      line-height: 1.9;
+      font-weight: 300;
+      padding: 0 36.81px 36.81px;
+      margin-bottom: .4em;
+}
+  .edit-age {
+    display: inline-block;
+    position: relative;
+}
+  input {
+    line-height: 1;
+    font-weight: 300;
+    outline: 0;
+    color: #1689e5;
+}
+
+  .border {
+    border: 1px solid #999;
+}
+
+  .edit-age .enter-age {
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  .edit-retirement {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    width: auto;
+    display: inline-block;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  .edit-retirement .retirement {
+    height: 53px;
+    top: 1px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  .edit-income {
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}
+  .enter-income {
+    width: 195px !important;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: -45px;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+  ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    color:black;
+}
+  ol li a {
+      color:black !important;
+  }
+  .rectangle-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;   
+}
+
+.rectangle-list a:hover{
+    background: #eee;
+}   
+
+.rectangle-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #fa8072;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after{
+    position: absolute; 
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .3s ease-out;               
+}
+
+.rectangle-list a:hover:after{
+    left: -.5em;
+    border-left-color: #fa8072;             
+} 
+.md-button.md-default-theme.md-raised[disabled], .md-button.md-raised[disabled], .md-button.md-default-theme.md-fab[disabled], .md-button.md-fab[disabled]{
+    background-color:lightgray !important;
+}
+
+.md-default-theme .md-datepicker-calendar, .md-datepicker-calendar
+{
+    background-color:white !important;
+}

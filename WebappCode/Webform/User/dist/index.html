@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="InvestorFunda - By RightFoot.in">
+	<meta name="keywords" content="SIP,Investment,InvestorFunda">
+	<meta name="author" content="Investment">
+	<!-- <base href="/"> -->
+
+	<title>Welcome To InvestorFunda</title>
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+
+	
+	<!-- Css/Less Stylesheets -->
+	<link rel="stylesheet" href="styles/angular-material.min.css">
+	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main.min.css">
+
+    <link href="styles/Common.css" rel="stylesheet" />
+	<!-- <link rel="stylesheet" href="styles/vendors/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="_tmp/main.min.css"> -->
+	 
+ 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link href="../../../Style/Common/Dashboard.css" rel="stylesheet" />
+    
+	<!-- Match Media polyfill for IE9 -->
+	<!--[if IE 9]> <script src="scripts/ie/matchMedia.js"></script>  <![endif]--> 
+</head>
+<body ng-app="app" 
+	id="app" custom-page
+	class="app off-canvas {{themeActive}}" ng-class="{'nav-expand': navFull, 'body-full': bodyFull}"
+	ng-controller="UserCtrl">
+
+
+	<header class="site-head backgroundColor" ng-controller="HeadCtrl"
+		id="site-head" ng-class="{'fixedHeader': fixedHeader}" 
+		ng-include=" 'views/header.html' ">
+		<!-- linked header (static) view -->
+	</header>
+
+
+	<!-- main-container -->
+	<div class="main-container clearfix" ng-class="{'nav-expand': navFull, 'nav-horizontal': navHorizontal}">
+		<aside class="nav-wrap" ng-class="{'nav-expand': navFull, 'nav-offcanvas': navOffCanvas}"
+			id="site-nav" custom-scrollbar
+			ng-include=" 'views/nav.html' ">
+		
+		</aside>
+
+		<!-- content-here -->
+		<div ng-class="{'nav-expand': navFull, 'fixedHeader': fixedHeader}"
+			class="content-container" 
+			id="content"
+			ng-view>
+		</div>
+
+	</div> <!-- #end main-container -->
+
+	
+    <div ng-include="'../../Common/Popup/Loader.html'"></div>
+	
+	<!-- Dev only -->
+	<script src="scripts/vendors.js"></script>
+
+	<script src="scripts/plugins.js"></script>
+
+	
+	<script src="scripts/app.js"></script>
+    <script src="../../../Script/Module/Config.js"></script>
+    <script src="scripts/lazyload/directives/Common/Common.Dir.js"></script>
+    <script src="../../../DesignContent/Plugins/Script/Angular/ngStorage.js"></script>
+    <script>
+        function ShowLoader()
+        {
+            $("#LoaderShow").modal('show');
+        }
+
+        function HideLoader()
+        {
+            $("#LoaderShow").modal('hide');
+        }
+    </script>
+	
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<div class="page page-dashboard" ng-controller="DashboardCtrl">
+	
+	<div class="page-wrap">
+
+		<div class="row">
+			<!-- dashboard header -->
+			<div class="col-md-12">
+				<div class="dash-head clearfix mt15 mb20">
+					<div class="left">
+						<h4 class="mb5 text-light">Welcome to InvestorFunda</h4>
+						<p class="small"><strong>Here is</strong> your personlised Dashboard</p>
+					</div>
+					<!--<div class="right mt10">
+						<span sparkline type="bar" bar-color="#4CAF50">10,8,4,10,7,0,3,4,6,5,9,12,9</span>
+						<h5 class="text-bold mb0 mt5">$1,33,404</h5>
+					</div>-->
+				</div>
+			</div>
+		</div> <!-- #end row -->
+
+		<!-- row -->
+		<div class="row">
+
+			<!-- Analytics -->
+			<div class="col-md-8">
+                <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                    <div class="panel-heading">Investment Summary</div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="col-sm-5">SIP</th>
+                                    <th class="col-sm-1">LumpSum</th>
+                                    <th>All</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cost of Investment</td>
+                                    <td>500</td>
+                                    <td >
+                                       0
+                                    </td>
+                                    <td>500</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Total Dividend Reinvestment</td>
+                                    <td>0</td>
+                                    <td >
+                                        0
+                                    </td>
+                                    <td>0</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Total Profit/Loss</td>
+                                    <td>32.7</td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>-32.07</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Absolute Return</td>
+                                    <td>-6.7%</td>
+                                    <td >
+                                        0.00%
+                                    </td>
+                                    <td>-6.57%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+				
+			</div> <!-- #end analytics -->
+
+
+		
+			
+
+			<div class="col-md-4">
+				<div class="panel panel-default mb20 panel-hovered">
+					<div class="panel-heading">Investment Graph</div>
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="storagePercent" options="storageOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{storagePercent}}%</strong>
+										<p class="xsmall">Storage</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="serverPercent" options="serverOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{serverPercent}}%</strong>
+										<p class="xsmall">Server</p>
+									</div>
+								</div>
+							</li>
+							<li class="col-md-4 col-sm-4">
+								<div easypiechart percent="clientPercent" options="clientOpts" class="easypiechart">
+									<div class="data">
+										<strong class="xsmall">{{clientPercent}}%</strong>
+										<p class="xsmall">Client</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> <!-- #end row -->
+
+				<!-- row -->
+        <!-- row -->
+        <div class="row">
+
+            <!-- Analytics -->
+            <div class="col-md-8">
+                <div class="panel panel-default mb20 panel-hovered project-stats table-responsive">
+                    <div class="panel-heading">Investment Portfolio</div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Funds Name</th>
+                                    <th >Inv. Cost</th>
+                                    <th >Curr. Cost</th>
+                                    <th>Profit/Loss</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Axis Long Term Equity Fund</td>
+                                    <td>500</td>
+                                    <td class="text-center">
+                                        500.17
+                                        <!--<span sparkline type="pie" slice-colors="[#4CAF50,#eee]" width="2em" height="2em">2,8</span>-->
+                                    </td>
+                                    <td>1.47</td>
+                                    <td><input type="button" class="btn btn-success"  value="Action"/></td>
+                                </tr>
+
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div> <!-- #end analytics -->
+            <!-- recent activities -->
+            <div class="col-md-4">
+                <div class="panel panel-default mb20 activities">
+                    <div class="panel-heading">Activities</div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li class="primary">
+                                <span class="point"></span>
+                                <span class="time small text-muted">2 mins ago</span>
+                                <p>Jonathan attend a meeting.</p>
+                            </li>
+                            <li class="success">
+                                <span class="point"></span>
+                                <span class="time small text-muted">1 hour ago</span>
+                                <p>Designed the wordpress theme</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- #end recent activities -->
+
+
+            
+        </div> <!-- #end row -->
+        <!-- row -->
+		<div class="row">
+
+			
+			<!-- browser share -->
+			<div class="col-md-8 col-sm-8">
+				<div class="panel panel-default mb20 panel-hovered">
+					<div class="panel-heading">Asset Allocation</div>
+					<div class="panel-body text-center">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Type</th>
+                                    <th>Actual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><c3-chart id="c3chartbrowsershare" config="PortfolioAllocationGraph"></c3-chart></td>
+                                    <td>Equity & Debt</td>
+                                    <td >
+                                        48% & 52%
+                                    </td>
+                                   
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+						
+					</div>
+				</div>
+			</div>
+
+			
+			<!-- list widgets -->
+			<div class="col-md-4 col-sm-12">
+				<div class="panel panel-default mb20 list-widget">
+					<ul class="list-unstyled clearfix">
+						<li>
+							<i class="fa fa-file-o"></i>
+							<span class="text">File List</span>
+							<span class="badge badge-xs badge-primary right">100</span>
+						</li>
+						<li>
+							<i class="fa fa-comments-o"></i>
+							<span class="text">Messages</span>
+							<span class="badge badge-xs badge-info right">40+</span>
+						</li>
+						<li>
+							<i class="fa fa-bullhorn"></i>
+							<span class="text">Notifications</span>
+							<span class="badge badge-xs badge-success right">22</span>
+						</li>
+						<li>
+							<i class="fa fa-hdd-o"></i>
+							<span class="text">Bandwidth usage</span>
+							<span class="badge badge-xs badge-danger right">80%</span>
+						</li>
+						<li>
+							<i class="fa fa-microphone"></i>
+							<span class="text">Calls Attended</span>
+							<span class="badge badge-xs badge-info circle right">5</span>
+						</li>
+						<li>
+							<i class="fa fa-bookmark-o"></i>
+							<span class="text">Bookmarks Today</span>
+							<span class="badge badge-xs circle badge-warning right">2</span>
+						</li>
+						<li>
+							<i class="fa fa-bug"></i>
+							<span class="text">Bug Fix Today</span>
+							<span class="badge badge-xs circle badge-danger right">8</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- #end row -->
+
+		
+
+	</div> <!-- #end page-wrap -->
+</div>

@@ -1,0 +1,81 @@
+﻿<div class="col-md-12 margin-bottom-60" style="background-color:white">
+<div class="row margin-bottom-10" style="background-color:gray" ng-show="EasySIP_Step1">
+
+    <img src="../../../Img/EasySip.png" style="width:100%" />
+</div>
+<div class="row margin-bottom-40" ng-show="EasySIP_Step1">
+    <div class="row tab-v3">
+        
+        <div class="col-sm-12">
+            
+            <div class="panel-body">
+                <form class="margin-bottom-40" role="form">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">YOUR INVESTMENT HORIZON</label>
+                            <select class="form-control" ng-model="Investment.horizone">
+                                <option>Select Horizon</option>
+                                <option ng-value="1">1 Year</option>
+                                <option ng-value="2">2 Year</option>
+                                <option ng-value="3">3 Year</option>
+                                <option ng-value="4">4 Year</option>
+                                <option ng-value="5">5 Year</option>
+                                <option ng-value="6">6 Year</option>
+                                <option ng-value="7">7 Year</option>
+                                <option ng-value="8">8 Year</option>
+                                <option ng-value="9">9 Year</option>
+                                <option ng-value="10">10 Year</option>
+                                <option ng-value="11">11 Year</option>
+                                <option ng-value="12">12 Year</option>
+                                <option ng-value="13">13 Year</option>
+                                <option ng-value="14">14 Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">YOUR MONTHLY INVESTMENT IS</label>
+                            <select class="form-control" ng-model="Investment.MonthllyInvestment">
+                                <option>Select Investment</option>
+                                <option ng-value="2000">2000</option>
+                                <option ng-value="4000">4000</option>
+                                <option ng-value="6000">6000</option>
+                                <option ng-value="8000">8000</option>
+                                <option ng-value="10000">10000</option>
+                                <option ng-value="12000">12000</option>
+                                <option ng-value="14000">14000</option>
+                                <option ng-value="16000">16000</option>
+                                <option ng-value="18000">18000</option>
+                                <option ng-value="20000">20000</option>
+                                <option ng-value="22000">22000</option>
+                                <option ng-value="24000">24000</option>
+                                <option ng-value="26000">26000</option>
+                                <option ng-value="28000">28000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">CHOOSE YOUR RISK PROFILE</label>
+                            <select class="form-control" ng-model="Investment.risk">
+                                <option>Select Risk</option>
+                                <option ng-value="Low">Low</option>
+                                <option ng-value="Moderate">Moderate</option>
+                                <option ng-value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="button" class="btn-u btn-u-blue" ng-click="StartSipPopup()" value="Invest Now" style="margin-left:15px"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row margin-bottom-40" ng-show="EasySIP_Step2">
+    <div class="col-md-12" style="background-color:white;" >
+        <div class="row" ng-include="'../../Webform/Common/Html/portFolio.html'"></div>
+    </div>
+</div>
+
+</div>

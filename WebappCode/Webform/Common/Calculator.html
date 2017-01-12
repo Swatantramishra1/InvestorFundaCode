@@ -1,0 +1,72 @@
+﻿
+<div class="md-padding" layout="row" >
+    <div class="row" >
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline" style="color:white">My monthly investment need</span>
+                    <span class="md-subhead text-justify" style="color:white">Suppose you want to have Rs. 10 lakhs in 5 years. How much should you save and invest using SIP on a monthly basis from now until then? Use this calculator when you know how much money you need at a point in time, and would like to know what the SIP amount should be.</span>
+
+                </md-card-title-text>
+
+            </md-card-title>
+            <md-card-actions layout="row">
+                <md-button class="md-raised" data-toggle="modal" ng-click="OpenPopup('SIP CALCULATE')" data-target="#myModal" >Calculate SIP amount</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-card md-theme="dark-blue">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline" style="color:white;">My Child’s Education need</span>
+                    <span class="md-subhead text-justify" style="">Use this calculator to determine the amount of monthly SIP investment or bulk amount investment required to meet the goal of a child's future education needs. All you need to know is the age of the child, and your estimate of cost of education today, and the calculator will do the rest.</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-lg card-media">
+
+                    </div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row">
+                <md-button class="md-raised">Calculate SIP for Child's education</md-button>
+            </md-card-actions>
+        </md-card>
+
+
+    </div>
+    <div class="row" >
+        <md-card md-theme="dark-blue">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline" style="color:white">Tax Savings Calculator</span>
+                    <span class="md-subhead text-justify" style="color:white">Use this calculator to calculate how much tax can save by investing in ELSS, NPS and other 80C instruments.</span>
+
+                </md-card-title-text>
+
+            </md-card-title>
+            <md-card-actions layout="row" style="margin-top:20px">
+                <md-button class="md-raised" data-toggle="modal" ng-click="OpenPopup('SIP CALCULATE')" data-target="#myModal">Calculate Tax Savings</md-button>
+            </md-card-actions>
+        </md-card>
+        <md-card md-theme="dark-blue">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline" style="color:white;">My Child’s Marriage need</span>
+                    <span class="md-subhead text-justify" style="">Use this calculator to determine the amount of monthly SIP investment or bulk amount investment required to meet the goal of a child's marriage needs. If you know how many years you have to save up, and the cost of a marriage (in today's terms), we can do the math to figure out how much you need to save for the future.</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <div class="md-media-lg card-media">
+
+                    </div>
+                </md-card-title-media>
+            </md-card-title>
+            <md-card-actions layout="row">
+                <md-button class="md-raised">Calculate SIP for Child's marriage</md-button>
+            </md-card-actions>
+        </md-card>
+
+
+    </div>
+    
+    <div ng-include="'#/Popup/Calculator_Popup.html'"></div>
+
+</div>

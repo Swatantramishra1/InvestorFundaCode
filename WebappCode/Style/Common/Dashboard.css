@@ -1,0 +1,36 @@
+﻿ td{
+text-align:center;
+padding-top:6px;
+padding-bottom:6px;
+padding-left:3px;
+padding-right:3px;
+font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.57142857;
+    /*color: #464646;*/
+}
+th{
+text-align:center;
+padding-top:6px;
+padding-bottom:6px;
+padding-left:3px;
+padding-right:3px;
+font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.57142857;
+}
+.dashboarText{
+    color:#F18670;
+}
+.NoPadding{
+    padding:0px;
+}
+.table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #DDDDDD;
+}
+.tdStyle{
+    text-align:left;
+}
+.investment_body{
+    padding:10px;
+}

@@ -1,0 +1,142 @@
+﻿<md-dialog aria-label="Mango (Fruit)" style="background-color:white;width:800px;margin-top:50px">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools" style="background-color:#0079d7">
+                <div flex >
+                <h2 style="color:white">
+                    {{FundsDetails.SchemeName}}
+                </h2>
+                <h4 style="color:white">{{FundsDetails.CategoryName}}</h4>
+                </div>
+           
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="../../../Img/ic_close_white_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+               
+                <div class="col-xs-12">
+                    <div class="col-xs-2 rounded" style="border:1px solid #c2c3c9;padding:8px;">
+                        <h5>3 MONTH</h5>
+                        <h3 class="ColorNav">{{FundsDetails.Return_3Mon | number:2}}% <i class="fa fa-sort-up"></i></h3>
+                    </div>
+                    <div class="col-xs-2 rounded" style="border:1px solid #c2c3c9;padding:8px;margin-left:20px">
+                        <h5>6 MONTH</h5>
+                        <h3 class="ColorNav">{{FundsDetails.Return_6Mon | number:2}}% <i class="fa fa-sort-down"></i></h3>
+                    </div>
+                    <div class="col-xs-2 rounded" style="border:1px solid #c2c3c9;padding:8px;margin-left:20px">
+                        <h5>1 YEAR</h5>
+                        <h3 class="ColorNav">{{FundsDetails.Return_1Yr | number:2}}% <i class="fa fa-sort-up"></i></h3>
+                    </div>
+                    <div class="col-xs-2 rounded" style="border:1px solid #c2c3c9;padding:8px;margin-left:20px">
+                        <h5>3 YEAR</h5>
+                        <h3 class="ColorNav">{{FundsDetails.Return_3Yr | number:2}}% <i class="fa fa-sort-up"></i></h3>
+                    </div>
+                    <div class="col-xs-2 rounded" style="border:1px solid #c2c3c9;padding:8px;margin-left:20px">
+                        <h5>5 YEAR</h5>
+                        <h3 class="ColorNavNone">{{FundsDetails.Return_5Yr | number:2}} <i class="fa fa-sort-up"></i></h3>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <h3><strong>Objective</strong> </h3>
+                    <p>{{FundsDetails.objective}}</p>
+                </div>
+                <div class="col-xs-12">
+                    <div class="tab-v1">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-target="#SCHEMEDETAILS" data-toggle="tab">SCHEME DETAILS</a></li>
+                            <li><a  data-target="#LOADDETAILS" data-toggle="tab">LOAD DETAILS</a></li>
+                           
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="SCHEMEDETAILS">
+                                <div class="row">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td>Fund Type :</td>
+                                                <td>Scheme Type :</td>
+                                                <td>Launch Date :</td>
+                                                <td>Benchmark :</td>
+                                                <td>Asset Size(Rs. Cr) :</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{{FundsDetails.SchemeOption}}</td>
+                                                <td>{{FundsDetails.schemeType}}</td>
+                                                <td>{{FundsDetails.LaunchDate}}</td>
+                                                <td>{{FundsDetails.BenchmarkName}}</td>
+                                                <td>{{FundsDetails.AssetSize}} crore </td>
+                                                <!--(As on Feb 29, 2016)-->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>Lumpsum Min Investment :</td>
+                                                <td>Last Dividend :</td>
+                                                <td>Bonus :</td>
+                                                <td>Fund Manager :</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{{FundsDetails.MinimumInvestment}}</td>
+                                                <td>{{FundsDetails.DividendPercentage_Latest}}</td>
+                                                <td>{{FundsDetails.Bonus_Latest == null? 'N.A.':FundsDetails.Bonus_Latest}}.</td>
+                                                <td>{{FundsDetails.FundManager}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4" style="text-align:center">Note:N.A.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="LOADDETAILS">
+                                <div class="row">
+                                    <table class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <td>Entry Load :</td>
+                                                <td>Exit Load :</td>
+                                                <td>Load Comments :</td>
+                                           
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>N.A.</td>
+                                                <td>N.A.</td>
+                                                <td>{{FundsDetails.ExitLoad}}</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button ui-sref="" target="_blank" md-autofocus>
+               View Details
+            </md-button>
+            <span flex></span>
+    
+        </md-dialog-actions>
+    </form>
+</md-dialog>

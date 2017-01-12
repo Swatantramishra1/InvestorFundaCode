@@ -1,0 +1,320 @@
+﻿
+<style>
+    body {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        background-color: #D8D8D8;
+    }
+
+    #wrapper {
+        width: 100%;
+        padding: 0px;
+        margin: 0px auto;
+        font-family: helvetica;
+        position: relative;
+    }
+
+        #wrapper .baricon {
+            display: inline-block;
+            border-radius: 50% !important;
+            padding: 7px;
+            color: white;
+            width: 37px;
+            background-color: #c2c3c9;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px rgba(102,0,51,1);
+        }
+
+        #wrapper .progress_bar {
+            width: 200px;
+            height: 1px;
+            border-radius: 20px !important;
+            background-color: #D8D8D8;
+            display: inline-block;
+        }
+
+        /*#wrapper form div {
+            margin-left: 340px;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 300px;
+            margin-top: 50px;
+            background-color: #585858;
+        }
+
+            #wrapper form div p {
+                color: #F2F2F2;
+                margin: 0px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            #wrapper form div .form_head {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+            #wrapper form div input[type="text"] {
+                width: 200px;
+                height: 40px;
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                margin-top: 10px;
+            }
+
+            #wrapper form div input[type="button"], input[type="submit"] {
+                width: 80px;
+                height: 40px;
+                border-radius: 5px;
+                border: 2px solid white;
+                background: none;
+                color: white;
+                margin: 5px;
+                margin-top: 10px;
+            }*/
+
+    #Money,#Risk,#InvestedYear {
+        display: none;
+    }
+    /*#Money,#Risk,#Investment,#InvestedYear {
+        display: none;
+    }*/
+</style>
+<div class="col-md-12" style="background-color:white;margin-bottom:80px" ng-show="StartSIP_Step1">
+
+    <div class="row margin-bottom-10"  style="height:300px;background-color:#f5f5f5;padding-top:6%">
+        <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:30px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+            The better we know you, the better advice we can give.
+        </h1>
+        <h3 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-weight:800;font-size:30px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+            ANSWER THESE QUESTIONS
+        </h3>
+        <h3 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:27px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+            It Help us to get to know you better to
+            make best portfolio for you
+        </h3>
+    </div>
+    <div class="row" >
+        <div id="wrapper" style="margin-top:20px">
+            <br>
+            <span class='baricon'>1</span>
+            <span id="bar1" class='progress_bar'></span>
+            <span class='baricon'>2</span>
+            <span id="bar2" class='progress_bar'></span>
+            <span class='baricon'>3</span>
+            <span id="bar3" class='progress_bar'></span>
+            <span class='baricon'>4</span>
+            <!--<span id="bar4" class='progress_bar'></span>
+            <span class='baricon'>5</span>-->
+
+                <div class="row margin-bottom-10" id="Year">
+                    <div class="col-md-12">
+                        <img src="../../../Img/StartSip/AGERSi.png"  />
+                       
+                    </div>
+                    <div class="col-md-12 text-center"> <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+    How old are you
+</h1></div>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Year', 'Money', 'bar1','Below30');">
+                                Below 30
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Year', 'Money', 'bar1','Between30-35');">
+                                30-35
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Year', 'Money', 'bar1','Between36-55');">
+                                36-55
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Year', 'Money', 'bar1','Above56');">
+                                Above 56
+                            </button>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row margin-bottom-10" id="Money">
+                    <div class="col-md-12">
+                        <img src="../../../Img/StartSip/InvestnowRSI.png" style="margin-top:10px" />
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                            How much money do you want to invest
+                        </h1>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Money', 'Risk', 'bar2','2000');">
+                                Upto 2000
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Money', 'Risk', 'bar2','5000');">
+                               2000-5000
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Money', 'Risk', 'bar2','8000');">
+                                5000 - 10000 
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Money', 'Risk', 'bar2','10000');">
+                                10000 & Above
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="row margin-bottom-10" id="Risk">
+                <div class="col-md-12">
+                    <img src="../../../Img/StartSip/RISKRSi.png" style="margin-top:10px" />
+                </div>
+                <div class="col-md-12 text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                        How much is your risk appetite?
+                    </h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Risk', 'InvestedYear', 'bar3','Low');">
+                            LOW RISK
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Risk', 'InvestedYear', 'bar3','Mederate');">
+                            MEDIUM RISK
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Risk', 'InvestedYear', 'bar3','High');">
+                            HIGH RISK
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Risk', 'Investment', 'bar3','Not');">
+                            I AM NOT SURE,HELP ME
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row margin-bottom-10" id="Investment">
+                <div class="col-md-12">
+                    <img src="../../../Img/StartSip/SAVETAXESRSi.png" style="margin-top:10px"  />
+                </div>
+                <div class="col-md-12 text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                        YOUR PURPOSE OF INVESTMENT
+                    </h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Investment', 'InvestedYear', 'bar4');">
+                           TAX SAVING
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('Investment', 'InvestedYear', 'bar4');">
+                            NON TAX SAVING
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                  
+                </div>
+            </div>-->
+            <div class="row margin-bottom-10" id="InvestedYear" >
+                <div class="col-md-12">
+                    <img src="../../../Img/StartSip/Time500x150-01.png"  style="margin-top:10px" />
+                </div>
+                <div class="col-md-12 text-center">
+                    <h1 style="color:#293542  !important;margin-bottom:20px;text-align:center;font-size:34px;font-family: 'Open Sans', 'Source Sans Pro', sans-serif;">
+                        HOW MANY YEARS WOULD YOU STAY INVESTED
+                    </h1>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('InvestedYear', 'InvestedYear', 'bar3','1')" >
+                           Less than 1 Year
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('InvestedYear', 'InvestedYear', 'bar3','3')" >
+                            1-3 Year
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('InvestedYear', 'InvestedYear', 'bar3','5')">
+                            3-5 Year
+                        </button>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-block btn-dropbox  Green_Btn" ng-click="show_next('InvestedYear', 'InvestedYear', 'bar3','10')">
+                            More than 5 Year
+                        </button>
+                    </div>
+                </div>
+            </div>
+                <!--<div id="account_details">
+                    <p class='form_head'>Account Details</p>
+                    <p>Email Address</p>
+                    <input type="text" placeholder='Email Address'>
+                    <p>Password</p>
+                    <input type="text" placeholder='Password'>
+                    <br>
+                    <input type="button" value="Next" ng-click="show_next('account_details','user_details','bar1');">
+                </div>-->
+
+     
+
+        </div>
+    </div>
+    <div class="row text-right" ng-show="StartSipInvestNowBtn">
+        <md-button  class="md-raised" ng-click="SIPClick()">Click To Procedd</md-button>
+    </div>
+    </div>
+
+<div class="col-md-12" style="background-color:white;margin-bottom:80px" ng-show="StartSIP_Step2">
+    <div class="row" ng-include="'../../Webform/Common/Html/portFolio.html'"></div>
+</div>
+
+<script>
+
+</script>

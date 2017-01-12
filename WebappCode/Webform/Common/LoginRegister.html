@@ -1,0 +1,168 @@
+﻿
+<style>
+    .tabsdemoDynamicHeight md-content {
+        background-color: transparent !important;
+    }
+
+        .tabsdemoDynamicHeight md-content md-tabs {
+            background: #f6f6f6;
+            border: 1px solid #e1e1e1;
+        }
+
+            .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+                background: white;
+            }
+
+        .tabsdemoDynamicHeight md-content h1:first-child {
+            margin-top: 0;
+        }
+
+    .loginBox {
+        max-width: 90%;
+        width: 500px;
+    }
+
+    .stretch input {
+        width: 100%;
+    }
+</style>
+<div ng-cloak >
+    <div class="col-lg-12">
+        <div class="col-lg-1">
+
+        </div>
+        <div class="col-lg-10">
+            <md-content>
+                <md-tabs md-dynamic-height md-border-bottom>
+                    <md-tab label="Login">
+                        <md-content class="md-padding">
+                            <div layout="column" layout-align="center center" layout-fill="layout-fill">
+                                <div layout="column" class="loginBox md-whiteframe-z1">
+                                    <md-toolbar>
+                                        <h2 class="md-toolbar-tools md-background-custom"><span style="color:white">LOG IN AND START INVESTING</span></h2>
+                                    </md-toolbar>
+                                    <md-content layout="column" class="md-padding">
+                                        <form name="login" ng-show="!ForgotPasswordDiv">
+                                            <md-input-container>
+                                                <label>Email</label>
+                                                <input type="email" ng-model="user.username" required />
+                                            </md-input-container>
+                                            <md-input-container>
+                                                <label>Password</label>
+                                                <input type="password" ng-model="user.password" required />
+                                            </md-input-container>
+                                            <div layout="row" layout-align="center center" style="padding-top:20px;">
+                                                <md-button class="md-raised md-button-custom" ng-click="Login_All()" ng-disabled="!(!!user.username || !!user.password)">Login</md-button>
+                                                <div flex="flex"></div>
+                                                <md-button href="" md-no-ink="md-no-ink" ng-click="ForgotPassWordStep1()">Forgot Password</md-button>
+                                            </div>
+                                            <div layout="row" style="padding-top:20px;color:red" ng-show="ErrorMessage !=''">
+                                                {{ErrorMessage}}
+                                            </div>
+                                        </form>
+                                        <form name="ForgotPassword" ng-show="ForgotPasswordDiv2">
+                                            <md-input-container>
+                                                <label>Email</label>
+                                                <input type="email" ng-model="ForgotPassword.EmailID" required />
+                                            </md-input-container>
+                                            <md-input-container>
+                                                <label>Mobile No</label>
+                                                <input type="text" ng-model="ForgotPassword.MobileNO" required />
+                                            </md-input-container>
+                                            <div layout="row" layout-align="center center" style="padding-top:20px;">
+                                                <md-button class="md-raised md-button-custom"  ng-click="ChangePassword()">Back To Login</md-button>
+                                                <div flex="flex"></div>
+                                                <md-button href="" md-no-ink="md-no-ink" ng-click="ForgotPassWordStep2()">Submit</md-button>
+                                            </div>
+                                            <div layout="row" style="padding-top:20px;color:red" ng-show="ErrorMessage !=''">
+                                                {{ErrorMessage}}
+                                            </div>
+                                        </form>
+                                        <form name="ForgotPassword" ng-show="ForgotPasswordDivPassEnter">
+                                            <md-input-container>
+                                                <label>Password</label>
+                                                <input type="password" ng-model="ForgotPassword.Password" required />
+                                            </md-input-container>
+                                            <md-input-container>
+                                                <label>Confirm Password</label>
+                                                <input type="text" ng-model="ForgotPassword.ConfPassword" required />
+                                            </md-input-container>
+                                            <div layout="row" layout-align="center center" style="padding-top:20px;">
+                                               
+                                                <div flex="flex"></div>
+                                                <md-button href="" md-no-ink="md-no-ink" ng-click="ChangePassword()">Change Password</md-button>
+                                            </div>
+                                            <div layout="row" style="padding-top:20px;color:red" ng-show="ErrorMessage !=''">
+                                                {{ErrorMessage}}
+                                            </div>
+                                        </form>
+                                    </md-content>
+                                </div>
+                            </div>
+                            
+                        </md-content>
+                    </md-tab>
+                    <md-tab label="OPEN ACCOUNT">
+                        <md-content class="md-padding">
+                            <div layout="column" layout-align="center center" layout-fill="layout-fill">
+                                <div layout="column" class="loginBox md-whiteframe-z1">
+                                    <md-toolbar>
+                                        <h2 class="md-toolbar-tools md-background-custom"><span style="color:white">OPEN A FREE ACCOUNT</span></h2>
+                                    </md-toolbar>
+                                    <md-content layout="column" class="md-padding">
+                                        <md-input-container>
+                                            <label>First Name</label>
+                                            <input type="text" ng-model="Register.FirstName" />
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Last Name</label>
+                                            <input type="text" ng-model="Register.LastName" />
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Gender</label>
+                                            <md-select ng-model="Register.Gender">
+                                                <md-option  value="Male">Male</md-option>
+                                                <md-option value="Female">Female</md-option>
+                                                <md-option value="Other">Other</md-option>
+                                            </md-select>
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Pan Card No</label>
+                                            <input type="text" ng-model="Register.PanCard" required />
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Email</label>
+                                            <input type="email" ng-model="Register.Email" />
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Password</label>
+                                            <input type="password" ng-model="Register.Password" />
+                                        </md-input-container>
+                                        <md-input-container>
+                                            <label>Mobile No</label>
+                                            <input type="text" ng-model="Register.mobileno" />
+                                        </md-input-container>
+                                        <div layout="row" layout-align="center center" style="padding-top:20px;">
+                                            <md-button class="md-raised md-button-custom" ng-click="RegistrationFun()">Open Account</md-button>
+                                            <div flex="flex"></div>
+
+                                        </div>
+                                        <div layout="row" style="padding-top:20px;color:red" ng-show="ErrorMessage !=''">
+                                            {{ErrorMessage}}
+                                        </div>
+                                    </md-content>
+                                </div>
+                            </div>
+                        </md-content>
+                        
+                    </md-tab>
+                   
+                </md-tabs>
+            </md-content>
+        </div>
+        <div class="col-lg-1">
+
+        </div>
+    </div>
+
+</div>
